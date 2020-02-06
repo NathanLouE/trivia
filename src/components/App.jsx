@@ -3,7 +3,7 @@ import '../css/App.css';
 // import components
 import AnswerButton from './AnswerButton';
 import QuestionText from './QuestionText';
-import firebase from 'clients/firebase.js';
+import {buildFirebase} from '../clients/firebase.js';
 
 let database = buildFirebase();
 let databaseRef = database.ref("/questions");

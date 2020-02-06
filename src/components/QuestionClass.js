@@ -22,7 +22,11 @@ function cleanDataSet() {
 
 let database = firebase.database();
 let question = database.ref("/questions");
-question.once("question_text").then();
+question.once("question_text").then(displayQuestion);
+
+displayQuestion = function(question_text) {
+    const questions = question_text.val();
+}
 
 const formattedData = cleanDataSet();
 export default formattedData;
