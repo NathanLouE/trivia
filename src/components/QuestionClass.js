@@ -19,5 +19,10 @@ function cleanDataSet() {
 
   return cleanData
 }
+
+let database = firebase.database();
+let question = database.ref("/questions");
+question.once("question_text").then();
+
 const formattedData = cleanDataSet();
 export default formattedData;
