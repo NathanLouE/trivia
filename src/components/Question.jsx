@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import formattedQuestion from "./questionClass.js";
-
+import QuestionClass from "./QuestionClass.js";
+import QuestionText from "./QuestionText";
+import AnswerButton from "./AnswerButton";
 
 class Question extends Component {
   render() {
     return (
       <div>
-        Add your QuestionText, Reset Button and AnswerButtons here.
+        {/* <QuestionText Question={Question}/> */}
+        <AnswerButton />
       </div>
     );
   }

@@ -1,8 +1,8 @@
-import {question} from sample_data.json; 
+import {question} from '../clients/firebase.js';; 
 
-class Question {
+class QuestionClass {
     constructor(questionObj) {
-        this.question = question_text;
+        this.question = questions.question_text;
         this.answer1 = choices[0];
         this.answer2 = choices[1];
         this.answer3 = choices[2];

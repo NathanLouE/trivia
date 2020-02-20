@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css';
 // import components
 import AnswerButton from './AnswerButton';
+import Question from './Question';
 import QuestionText from './QuestionText';
 import {buildFirebase} from '../clients/firebase.js';
 
@@ -17,11 +18,13 @@ databaseRef.once("value").then(function(data) {
 class App extends Component {
 
   render() {
+    console.log(this.props.data);
     return (
       <div className="app">
         Trivia!
         <QuestionText />
         <AnswerButton />      
+
       </div>
 
     );
