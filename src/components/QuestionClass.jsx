@@ -1,4 +1,8 @@
-import {question} from '../clients/firebase.js';; 
+import {question} from '../clients/firebase.js'; 
+let database = firebase.database();
+let question = database.ref("/questions");
+question.once("question_text").then(displayQuestion);
+
 
 class QuestionClass {
     constructor(questionObj) {
@@ -17,12 +21,9 @@ function cleanDataSet() {
       cleanData.push(q);
   }
 
-  return cleanData
+  return cleanData;
 }
 
-let database = firebase.database();
-let question = database.ref("/questions");
-question.once("question_text").then(displayQuestion);
 
 displayQuestion = function(question_text) {
     const questions = question_text.val();

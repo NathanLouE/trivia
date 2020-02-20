@@ -8,7 +8,7 @@ class QuestionText extends Component {
     render () {
         return (
             <div>
-                {this.state.question}
+                {this.props.question}
             </div>
         )
     }

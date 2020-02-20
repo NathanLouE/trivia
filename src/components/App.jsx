@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 // import components
+import formattedData from './QuestionClass';
 import AnswerButton from './AnswerButton';
 import Question from './Question';
 import QuestionText from './QuestionText';
