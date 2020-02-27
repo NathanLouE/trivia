@@ -1,10 +1,11 @@
 import {question} from '../clients/firebase.js'; 
+import { Component } from 'react';
 let database = firebase.database();
 let question = database.ref("/questions");
 question.once("question_text").then(displayQuestion);
 
 
-class QuestionClass {
+class QuestionClass extends Component{
     constructor(questionObj) {
         this.question = questions.question_text;
         this.answer1 = choices[0];
