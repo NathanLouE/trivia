@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 // import components
-import Answers from './Answers.jsx';
+import Answer from './Answers.jsx';
 import Question from './Question.jsx';
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="app">
         Trivia!
-        <button  className="switch" onClick={() => this.handleClick()}>Click</button>
+        <button className="switch" onClick={() => this.handleClick()}>Click</button>
         <h1> <Question question={q.question_text}/> </h1>
         <div className="btnContainer">
           <div className="btnContainers">
