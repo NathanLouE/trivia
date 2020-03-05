@@ -1,4 +1,7 @@
 body {
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -7,4 +10,21 @@ body {
   text-align: center;
 }
 
+.answer1 {
+  padding: 10px;
+}
 
+.answer2 {
+  padding: 10px;
+}
+button {
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
+}

@@ -4,6 +4,7 @@ import '../css/App.css';
 import Answer from './Answer.jsx';
 import Question from './Question.jsx';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -30,17 +31,24 @@ class App extends Component {
     const q = this.props.data[this.state.count];
     return (
       <div className="app">
+        <p> Trivia Game! </p>
         <h1> <Question question={q.question_text}/> </h1>
         <div className="container">
           <div className="answer1">
             <button onClick={() => this.handleClick2(0)} className="answerButton"><Answer answer = {q.choices[0]}/></button>
-            <button onClick={() => this.handleClick2(1)} className="answerButton"><Answer answer = {q.choices[1]}/></button>
           </div>
           <div className="answer2">
+            <button onClick={() => this.handleClick2(1)} className="answerButton"><Answer answer = {q.choices[1]}/></button>
+          </div>
+    
+          <div className="answer3">
             <button onClick={() => this.handleClick2(2)} className="answerButton"><Answer answer = {q.choices[2]}/></button>
+          </div>
+          <div className="answer4">
             <button onClick={() => this.handleClick2(3)} className="answerButton"><Answer answer = {q.choices[3]}/></button>
           </div>
-          <button className="switch" onClick={() => this.handleClick()}>Click</button>
+          
+          <button className="switch" onClick={() => this.handleClick()}>Next</button>
         </div>
       </div>
     );
